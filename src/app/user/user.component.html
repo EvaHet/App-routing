@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <!-- <h2 style="text-align:center">User Profile Card</h2> -->
+
+  <div class="card">
+    <h1>Hello, {{username}}!</h1>
+    <label for="uname"><b>Change user name</b></label> <br>
+    <input type="text" placeholder="" name="uname" required [(ngModel)]="username"><br>
+
+    <label for="uname"><b>Change user password</b></label><br>
+    <input type="text" placeholder="" name="uname" required [(ngModel)]="password">
+    <!-- <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-user-check"></i></a>
+    <a href="#"><i class="fa fa-female"></i></a>
+    <a href="#"><i class="fa fa-male"></i></a>
+    <a href="#"><i class="fa fa-user-edit"></i></a>
+  </div> -->
+    <p><button (click)="onSave()">Save</button></p>
+  </div>
+</div>
