@@ -8,21 +8,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  username: string;
+  password: string;
 
   constructor(
     private userPersistance: UserPersistanceService,
     private router: Router) { }
 
   ngOnInit(): void {
+    this.userPersistance.get('username');
+    this.userPersistance.get('password');
   }
 
   onLogin(username: string, password: string) {
     if(username === "" || password ===""){
       alert("Empty password or username!")
+    } else if (username !== this.userPersistance.get('username') || password !== this.userPersistance.get('password')) {
+      alert("Incorrect password or username!")
     } else {
-    this.userPersistance.set('username', username);
-    this.userPersistance.set('password', password);
-    this.router.navigate(['/todo']);};
+      this.router.navigate(['/todo']);};
+    }
   }
 
-}
+

@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <form action="" method="post">
+  
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" #username required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" #password required>
+  
+        <button type="submit" (click)="onRegistr(username.value, password.value)">Register</button>
+        <div class="formbtm">
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+        </div>
+      </div>
+    </form>
+  </div>

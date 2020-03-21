@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { TodoComponent } from './todo/todo.component';
 import { UserComponent } from './user/user.component';
+import { RegistrComponent } from './registr/registr.component';
 
 
 
@@ -16,7 +17,8 @@ import { UserComponent } from './user/user.component';
     AppComponent,
     LoginComponent,
     TodoComponent,
-    UserComponent
+    UserComponent,
+    RegistrComponent
   ],
   imports: [
     BrowserModule,
